@@ -1,0 +1,129 @@
+body{
+    background-image: url('../assets/image1.png');
+    background-repeat: repeat;
+    
+}
+.chat-container{
+    display: flex;
+    flex-direction: column;
+    
+ }
+.chat-head{
+    display: flex;
+    background:#25d366;
+    flex: 1; 
+}
+.chat-head-head{
+width: 70px;
+}
+.chat-head-head img{
+width: 60px;
+text-align: center;
+margin-top: 5px;
+padding: 0;
+display: block;
+color: #25d366;
+}   
+.chat-head-head-below{
+    margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 0, 0.596);
+    }
+.chat-head-head-below img{ 
+    width: 50px;
+}   
+.chat-head-body{
+    flex: 8;
+    margin: 1px;}
+    .chat-head-body p{
+        flex: .5;
+       font-style: italic;
+          font-size:17px;
+          margin-left: 20px;  
+    }
+.chat-head-foot{
+    flex: 1;
+    margin: 1px;
+}
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+.chat-body{
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+}
+.chat-body .left{
+    padding: 10px;
+    padding-left: 30px;
+    border-radius:10px;; 
+    width: 50vw;
+    margin: 10px;
+    background: white;
+}
+
+.chat-body .right{
+  margin-left: auto;
+    background-color: #25d366;
+  margin-right: 10px;
+  width: 50vw;
+  margin-bottom: 5px;
+    padding: 10px;
+    padding-right: 30px;
+    border-radius:10px;; 
+    text-align: right;
+    }
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+.chat-foot{
+    display: flex;
+    height: 10vh;;
+    margin-top: 20px;
+}
+.chat-foot-head .text-field{
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom:auto;
+    position: fixed;
+    bottom: 0;
+    border: solid #d1cfcf;
+    border-radius: 2em;;
+    width: 90vw;
+}
+.chat-foot-body img{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d8d8d8;
+      
+   }
+   .chat-foot-body img:hover{
+    transform: translateY(1px);
+}
+@media (max-width:900px){
+    .chat-foot-head .text-field{ 
+        position: fixed;
+        bottom: 0; font-size: 20px;
+        padding: 10px;
+        border: solid #d1cfcf;
+        border-radius: 2em;;
+        width: 70vw;
+    }
+    .chat-foot-body img{
+        bottom: 0;
+        right: 0;
+        margin-right: 20px;
+          flex: 1;
+        min-width: 40px;
+        height:40px;
+        border-radius: 50%;
+        background: #d8d8d8;   
+       }  
+       .chat-foot-body img:hover{
+        transform: translateY(1px);
+    }   
+}

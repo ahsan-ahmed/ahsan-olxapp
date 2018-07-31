@@ -1,0 +1,103 @@
+// function uploadImage(){
+//     var storageRef = firebase.storage().ref(); 
+    
+//     var files = document.querySelector('.imageId').files // use the Blob or File API
+//      var promises;
+//      for var 
+//      var file=files[i];
+//      var imagesRef = storageRef.child('images/ads_'+ Math.random().toString().substring(2, 6) +'.jpg');
+//     return new Promise((resolve, reject) => {
+//         imagesRef.put(file)
+//         .then(function(snapshot) {
+//             //console.log('Uploaded a blob or file!', snapshot);
+//             imagesRef.getDownloadURL()
+//             .then(function(url) {
+//                 resolve(url);
+//                  //console.log('URL *****', url)
+//               }).catch(function(error) {
+//                 // Handle any errors
+//               });
+//         }).catch((error) => {
+//             console.log('bhai kuch masla hai', error.message)
+//             errorLogin.innerHTML='bhai pehle login ker -_- <br>phir ad submit ker!';
+//             errorLogin.style.color='red';
+
+//         });
+//     })
+
+
+
+
+///////////////////////////////////////////////////////////////////
+  // function validation(){
+    //     var firstname=document.querySelector('.firstname').value;
+    //     var lastname=document.querySelector('.lastname').value;
+    //     var email=document.querySelector('.email').value;
+    //     var pass=document.querySelector('.pass').value;
+    //     var fullnameerror=document.querySelector('.fullname-error');
+    //     var emailerror=document.querySelector('.email-error');
+    //     var passerror=document.querySelector('.pass-error');
+    //     if(firstname===''||lastname===''){
+    //       fullnameerror.innerHTML='fill both fields'
+    //       fullnameerror.style.color="red"
+    //     }
+    //     else if(email===''){
+    //       emailerror.innerHTML='fill email fields'
+    //     }
+    //     else if(pass===''){
+    //       passerror.innerHTML='fill password fields'
+    //     }       
+    // }
+
+// }
+/////////////////////////////////////////////////////////////////////
+'use strict';
+
+console.log('... Service Worker File Running ...');
+
+// Listner for Push Notification
+self.addEventListener('push', function (event) {
+  console.log('Received a push message', event);
+
+  var notification = event.data.json().notification
+  console.log(notification)
+  var title = notification.title || 'Yay a message.';
+  var body = notification.body || 'We have received a push message.';
+  var icon = '/images/icon-192x192.png';
+  // var tag = 'simple-push-demo-notification-tag';
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      // tag: tag
+    })
+  );
+
+});
+
+// on Notification Click do whatever you want...
+self.addEventListener('notificationclick', function (event) {
+  
+  console.log('On notification click: ', event.notification);
+  // Android doesn’t close the notification when you click on it
+  // See: http://crbug.com/463146
+  event.notification.close();
+
+  // This looks to see if the current is already open and
+  // focuses if it is
+  event.waitUntil(clients.matchAll({
+    type: 'window'
+  }).then(function (clientList) {
+    for (var i = 0; i < clientList.length; i++) {
+      var client = clientList[i];
+      if (client.url === '/' && 'focus' in client) {
+        return client.focus();
+      }
+    }
+    if (clients.openWindow) {
+      return clients.openWindow('/');
+    }
+  }));
+
+});

@@ -1,0 +1,90 @@
+.olx-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.olx-container-header-top{
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    margin: auto;
+}
+@media screen and (max-width:440px){
+ h5{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width:440px){
+     h5{
+        font-size: 15px;
+    }
+}    
+.olxLogo img{
+    float: left;
+    max-width: 120px;
+    max-height: 100vh;
+    margin-right: -8px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+.account{
+    width: 10vw;
+text-align: center;
+margin-right: 10px;
+}
+.account img{
+    max-height: 50px;
+    margin-left:-10px; 
+    margin-top: 10px;
+    margin-bottom: -22px;
+}
+.account h4{
+    font-size: 12px;
+    }
+.signoutClass{
+    flex:1;
+    float: right;
+    width: 40vw;
+}
+.signout-button{
+    min-width:80px;
+    float: right; 
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:1em; 
+    margin-top: 30px;
+    background-color:rgb(255, 144, 0);
+font-size: 17px;
+border: none;
+cursor: pointer;
+} 
+/*  *//*  *//*  *//*  *//*  *//*  */
+.chatroom-heading{
+ text-align: center;
+ flex: 8;
+font-size: 40px;
+color: blue}
+/*  *//*  *//*  *//*  *//*  */
+.chat-room-button{
+    display: flex;
+    margin: auto;
+
+}
+.chat-room-button input{
+    min-width:60px;
+    margin-top: 10px;
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-left: 5px;
+    background-color: rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}
+.chat-room-button input:active {
+    transform: translateY(1px);
+ }
+
+

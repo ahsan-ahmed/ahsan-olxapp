@@ -1,0 +1,413 @@
+
+
+.olx-container{
+    display: flex;
+    flex-direction: column;
+}
+.olx-container-header-top{
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    margin: auto;
+}
+@media screen and (max-width:440px){
+ h5{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width:440px){
+     h5{
+        font-size: 15px;
+    }
+}    
+.olxLogo img{
+    float: left;
+    max-width: 120px;
+    max-height: 100vh;
+    margin-right: -8px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+.account{
+    width: 10vw;
+text-align: center;
+margin-right: 10px;
+}
+.account img{
+    max-height: 50px;
+    margin-left:-10px; 
+    margin-top: 10px;
+    margin-bottom: -22px;
+}
+.account h4{
+    font-size: 12px;
+    }
+.signoutClass{
+    flex:1;
+    float: right;
+    width: 40vw;
+}
+.signout-button{
+    min-width:80px;
+    float: right; 
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:1em; 
+    margin-top: 30px;
+    background-color:rgb(255, 144, 0);
+font-size: 17px;
+border: none;
+cursor: pointer;
+} 
+
+@media (max-width:440px){
+
+    .signout-button{
+        min-width:80px;
+        float: left; 
+        min-height:50px;
+        padding: 6px 10px;
+        border-radius:1em; 
+        margin-top: 30px;
+        background-color:rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+} 
+}
+.olx-container-header{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    margin-bottom: 20px;
+    background:#1e83ff;
+    margin: auto;
+    border-radius:10px; 
+}
+
+.header-one{
+    flex:1;
+    width: 49vw;
+  
+}
+/*  *//*  *//*  *//*  *//*  */
+.chat-room-button{
+    display: flex;
+    margin: auto;
+
+}
+.chat-room-button input{
+    min-width:60px;
+    margin-top: 10px;
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-left: 5px;
+    background-color: rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}
+.chat-room-button input:active {
+    transform: translateY(1px);
+ }
+
+
+
+/*  */
+/*  *//*  *//*  */
+
+.olx-container-body{
+   margin: auto;
+}
+.olx-container-body-child{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 30px;;
+    flex-wrap: wrap;
+}
+/*  */
+.olx-container-body-one{
+    display: flex;
+    margin: auto;
+    
+  }
+
+.olx-container-body-one .propertys{
+    flex: 1;
+    text-align: center;
+    margin: 1px;
+}
+.olx-container-body-one .propertys figure img{
+height: 20vh; width:180px;
+cursor: pointer;
+}
+.olx-container-body-one .propertys figure {
+    border: 1px solid #f2f2f2;
+  }
+  .olx-container-body-one .propertys figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+
+.olx-container-body-one .cars{
+    flex: 1; margin: 1px;text-align: center;   
+}
+.olx-container-body-one .cars figure img{
+    width:180px;cursor: pointer;
+    height: 20vh;
+    }
+.olx-container-body-one .cars figure {
+    border: 1px solid #f2f2f2;
+  }
+.olx-container-body-one .cars figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;   
+}
+       
+.olx-container-body-one .laptops{
+    flex: 1; margin: 1px;text-align: center;    
+}
+.olx-container-body-one .laptops figure img{
+    height: 20vh;width:180px;cursor: pointer;
+}
+.olx-container-body-one .laptops figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-one .laptops figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;
+}
+/*  */
+
+.olx-container-body-two{
+    display: flex;
+    margin: auto;
+  }
+.olx-container-body-two .jobs{
+    flex: 1;
+    margin: 1px;
+    text-align: center;
+}
+.olx-container-body-two .jobs figure img{
+    width:180px;cursor: pointer;
+    height: 20vh;
+}
+.olx-container-body-two .jobs figure {
+    border: 1px solid #f2f2f2;
+  }
+  .olx-container-body-two .jobs figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+    
+.olx-container-body-two .mobiles{
+    flex: 1; margin: 1px;
+    text-align: center;
+}
+.olx-container-body-two .mobiles figure img{
+    width:180px;
+    height: 20vh;cursor: pointer;
+}
+.olx-container-body-two .mobiles figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-two .mobiles figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+    
+.olx-container-body-two .bikes{
+    flex: 1; margin: 1px;
+    text-align: center;
+}
+.olx-container-body-two .bikes figure img{
+    width:180px;
+    height: 20vh;cursor: pointer;
+}
+.olx-container-body-two .bikes figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-two .bikes figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+
+    
+/*  */
+.olx-container-body-three{
+    display: flex;
+    margin: auto;
+  
+}
+.olx-container-body-three .fashions{
+    flex: 1;
+    margin: 1px; text-align: center;
+}
+.olx-container-body-three .fashions figure img{
+    height: 20vh;width: 180px;cursor: pointer;
+}
+.olx-container-body-three .fashions figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-three .fashions figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+
+.olx-container-body-three .pets{
+    flex: 1; margin: 1px; text-align: center;
+}
+.olx-container-body-three .pets figure img{
+    width: 180px;height: 20vh;cursor: pointer;
+}
+.olx-container-body-three .pets figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-three .pets figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+
+.olx-container-body-three .books{
+    flex: 1; margin: 1px; text-align: center;
+}
+.olx-container-body-three .books figure img{
+    height: 20vh;cursor: pointer;
+    width: 180px;
+}
+.olx-container-body-three .books figure {
+    border: 1px solid #f2f2f2;
+}
+.olx-container-body-three .books figcaption {
+    border: 1px solid #f2f2f2;
+    height: 30px;;cursor: pointer;
+    background: #f8f8f8;;
+}
+.olx-container-body-dom-image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60vw;
+   }
+
+/*  */
+.olx-container-footer{
+    display: flex;
+ flex-direction: column;
+   height: 20vh;
+}
+.olx-container-footer .footer{
+  flex: 7;
+ }
+
+
+.loader {
+    margin: 20px;
+    border: 4px solid #3498db;
+    border-radius: 50%;
+    border-top: 4px solid #fff ;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 0.9s linear infinite; /* Safari */
+    animation: rotate 0.9s infinite linear;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes rotate {
+    0%    { transform: rotate(0deg); }
+    100%  { transform: rotate(360deg); }
+  }
+ 
+.hide{
+    display: none;
+}
+
+#search-image-div{
+    text-align: center;
+}
+
+#search-image-div img{
+    margin-top:50px;;
+    align-items: center;
+     width: 15%;
+}
+
+/*  */
+
+.header-five{
+    width: 100%;
+}
+.olx-container-header-search {
+    width: 80%;
+    padding: 6px;
+    font-size: 50px;
+    min-height:35px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-top: 12px;
+    border: none;
+    float: right;
+    margin-right: 1px;
+    background: #fff;
+    font-size: 17px;
+    cursor: pointer;
+ }
+.header-five #browsers{
+    background-color: rgb(255, 144, 0);
+    width:100%;
+}
+.header-five #browsers{
+    height: 50px;
+    font-size: 30px;
+}
+ 
+ .search-button-olx{
+     float: right;
+     min-width:48px ;
+     min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-top: 10px;
+     margin-right: 1px;
+     background: rgb(255, 144, 0);
+     font-size: 17px;
+     border: none;
+     cursor: pointer;
+    }
+.search-button-olx:active {
+       transform: translateY(1px);
+    }
+.add-button-olx{
+    min-width:60px;
+    margin-top: 10px;
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-left: 5px;
+    background-color: rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}
+.add-button-olx:active {
+    transform: translateY(1px);
+ }
+
+/*  */

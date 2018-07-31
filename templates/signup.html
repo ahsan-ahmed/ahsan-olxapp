@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDk6v6fSblQrd1nLw9QGsoGs-1UuzeYzPU",
+    authDomain: "readandwritedata-27907.firebaseapp.com",
+    databaseURL: "https://readandwritedata-27907.firebaseio.com",
+    projectId: "readandwritedata-27907",
+    storageBucket: "readandwritedata-27907.appspot.com",
+    messagingSenderId: "526759719465"
+  };
+  firebase.initializeApp(config);
+</script>
+    </head>
+<body class="body">
+<div class="container">
+    <div class="form-header">
+        <div class="inner-header"></div>
+        <div class="inner-body">
+            <h1>OLX APP</h1></div>
+        <div class="inner-footer"></div>
+    </div>
+     <div class="form-body">
+         <div class="form-heading"><h1>Signup Form</h1></div>
+         <div class="signup-fullname">
+         <label for="fullname">fullname</label><br>
+         <input type="text" class="firstname" placeholder="enter firstname">  
+         <input type="text" class="lastname" placeholder="enter lastname"> 
+        </div>
+        <div class="signup-email">
+            <label for="email">email</label><br>
+            <input type="text" class="email" placeholder="enter email">
+        </div>
+        <div class="signup-password">
+            <label for="pass">password</label><br>
+            <input type="password" class="pass" placeholder="enter password">
+        </div>
+        <div class="signup-button">
+            <center>
+            <input type="button" value="signup" class="signup-button" onclick="signUpInner()">
+        </center>
+        </div>
+        <div class="firebase-div">
+            <center>
+                <h2 class="firebase-res"></h2>
+            </center>
+        </div>
+    </div>
+     <div class="form-footer"></div>
+</div>
+    </body>
+    <script src="../scripts/app.js"></script>
+</html>

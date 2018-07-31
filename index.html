@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Olx Page</title>
+    <link rel="stylesheet" href="styles/olxApp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- TODO add manifest here -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="OLX PAKISTAN">
+  <link rel="apple-touch-icon" href="images/icons/icon-152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDk6v6fSblQrd1nLw9QGsoGs-1UuzeYzPU",
+        authDomain: "readandwritedata-27907.firebaseapp.com",
+        databaseURL: "https://readandwritedata-27907.firebaseio.com",
+        projectId: "readandwritedata-27907",
+        storageBucket: "readandwritedata-27907.appspot.com",
+        messagingSenderId: "526759719465"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+<body onload="chatPermission()">
+<div class="olx-container">
+    <div class="olx-container-header-top">
+            <div class="olxLogo"><img src="assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='index.html'" ></div>
+            <h5>Pakistan's <br>Largest<br> Marketplace</h5>
+            <div class="account" ><img src="assets/account-image.jpg" alt="account"> <h4 id="account-h4" onclick=" checkUserSignIn();userUidSaveInDb();"  
+              onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" style="cursor: pointer" >My<br>account</h4></div>
+            
+            <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+                onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+            </div>
+    </div>
+     <div class="olx-container-header">
+         <div class="header-one"><input type="button" value="Submit An Add" class="add-button-olx" 
+            onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" 
+            onclick="gotoCategoryPage();"> </div>
+
+         <div class="header-five"> 
+                <input list="browsers" name="browser" class="olx-container-header-search" placeholder="search...." onclick="search-category-page">
+                <datalist id="browsers">
+                <option value="mobile">
+                <option value="computer">
+                <option value="accessories">
+                <option value="properties">
+                <option value="laptop">
+                <option value="bike">    
+                <option value="car">
+              </datalist>
+        </div>
+        <div class="header-six">
+                <button type="submit" class="search-button-olx" onmouseover="this.style.backgroundColor='#ffaa0c'"
+                 onmouseout="this.style.backgroundColor=' #rgb(255, 144, 0)'" onclick="searchCategory()"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <div class="chat-room-button">
+     <input type="button" value="GO TO YOUR CHAT ROOM!!!" onclick="window.open('templates/chatHomepage.html')">
+    </div>
+    <!-- images receive -->
+  <div class="olx-container-body" >
+
+    <div class="olx-container-body-child">
+        <div class="olx-container-body-one">
+          <div class="propertys" onclick="globalCategory(className)">
+            <figure>
+              <img src="assets/propertiesImgs.gif" alt="property">
+              <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">propertys</figcaption>
+            </figure>
+            </div >
+          <div class="cars" onclick="globalCategory(className)">
+              <figure>
+                <img src="assets/carImgs.jpg" alt="cars">
+                <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Cars</figcaption>
+              </figure>
+           </div>
+          <div class="laptops" onclick="globalCategory(className)">
+              <figure>
+                <img src="assets/tvImgs.jpg" alt='tv'>
+                <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">laptops</figcaption>
+              </figure>
+          </div>
+        </div>
+          <div class="olx-container-body-two">
+          <div class="jobs" onclick="globalCategory(className)">
+              <figure>
+                <img src="assets/jobImgs.png" alt="jobs">
+                <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Jobs</figcaption>
+            </figure>
+          </div>
+          <div class="mobiles" onclick="globalCategory(className)">
+              <figure>
+                <img src="assets/mobileImgs.jpg" alt="mobiles">
+                <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Mobiles</figcaption>
+              </figure>
+          </div>
+          <div class="bikes" onclick="globalCategory(className)">
+              <figure>
+                <img src="assets/bikeImgs.jpg" alt="bikes">
+                <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Bikes</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="olx-container-body-three"> 
+         <div class="fashions" onclick="globalCategory(className)">
+            <figure>
+              <img src="assets/fashionImgs.jpg" alt="fashions">
+              <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Fashions</figcaption>
+            </figure>
+         </div>
+         <div class="pets" onclick="globalCategory(className)">
+            <figure>
+              <img src="assets/petImgs.jpg" alt="pets">
+              <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Pets</figcaption>
+             </figure>
+         </div>
+         <div class="books" onclick="globalCategory(className)">
+            <figure>
+              <img src="assets/bookImgs.png" alt="books">
+              <figcaption onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'">Books</figcaption>  
+            </figure>
+         </div>
+        </div>
+      </div>
+  </div>
+    <div class="olx-container-footer">
+        <div class="footer"></div>
+    </div>
+
+</div>
+</body>
+<script src="scripts/app.js"></script>
+</html>

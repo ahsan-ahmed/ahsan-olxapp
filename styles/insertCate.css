@@ -1,0 +1,211 @@
+.body{
+    align-content: center;
+}
+
+.olx-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   }
+  
+.olx-container-header-top{
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    margin: auto;
+}
+@media screen and (max-width:420px){
+    .olx-container{
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+       }
+.olx-container-header .login-body{
+        flex:1;
+        text-align: center;
+        font-size:3vh; 
+        width: 49vw;
+    margin-top: 20px;  
+    }
+    h5{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width:440px){
+     h5{
+        font-size: 15px;
+    }
+}    
+.olxLogo img{
+    float: left;
+    max-width: 120px;
+    max-height: 100vh;
+    margin-right: -8px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+.account{
+    width: 10vw;
+text-align: center;
+margin-right: 10px;
+}
+.account img{
+    max-height: 50px;
+    margin-left:-10px; 
+    margin-top: 10px;
+    margin-bottom: -22px;
+}
+.account h4{
+    font-size: 12px;
+    }
+.signoutClass{
+    flex:1;
+    float: right;
+    width: 40vw;
+}
+.signout-button{
+    min-width:80px;
+    float: right; 
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-top: 30px;
+    background-color:rgb(255, 144, 0);
+font-size: 17px;
+border: none;
+cursor: pointer;
+} 
+
+@media (max-width:440px){
+
+    .signout-button{
+        min-width:80px;
+        float: left; 
+        min-height:50px;
+        padding: 6px 10px;
+        border-radius:10px; 
+        margin-top: 30px;
+        background-color:rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+} 
+}
+.olx-container-header{
+    display: flex;
+    flex-direction: row;
+    background:#1e83ff;
+    height: 10vh;
+    margin: auto;
+    border-radius:10px; 
+}
+.login-head{
+    flex: 1;
+}
+.login-body{
+    flex:4;
+    text-align: center;
+    width: 49vw;
+font-size: 5vh;
+
+margin-top: 15px;  
+}
+.login-button input{
+    flex: 1;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    float: right; 
+    margin-right: 15px;
+    margin-bottom:10px; 
+    background:rgb(255, 144, 0);
+    border-radius: 10px;    
+    cursor: pointer;
+}
+.login-button input:hover{
+    transform: translateY(1px);
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+.container-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-body label{
+    margin-right: 150px;
+    font-size: 18px;
+}
+
+.container-body .name{
+   max-width: 50%;
+  font-size: 20px;
+  padding: 7px;
+ 
+}
+.container-body .categories{
+    max-width: 50%;
+   font-size: 20px;
+   padding: 7px;
+  
+}
+.container-body .longDescription{
+    max-width: 50%;
+  font-size: 20px;
+  padding: 7px;
+ 
+}
+.container-body .price{
+    max-width: 50%;
+  font-size: 20px;
+  padding: 7px;
+   
+}
+.container-body .model{
+    max-width: 50%;
+  font-size: 20px;
+  padding: 7px;
+   
+}
+.container-body .year{
+    max-width: 50%;
+  font-size: 20px;
+  padding: 7px;
+   
+}
+
+.container-body .imageId{
+    font-size: 15px;
+    max-width: 50vw;
+    padding: 7px;  
+}
+.submit-button{
+    background: rgb(255, 144, 0);
+    height: 50px;
+    margin-left:10px;
+    min-width:180px;
+    border-radius:10px;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+.submit-button:hover{
+    transform: translateY(1px);
+}
+.container-footer {
+    margin: auto;
+    width: 60vw;
+}
+.container-footer .goto-olx-app{
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+    background: rgb(255, 144, 0);
+    border-radius: 10px;    
+    cursor: pointer;
+    margin-top: 10px;
+ }
+.container-footer .goto-olx-app:hover{
+    transform: translateY(1px);
+}

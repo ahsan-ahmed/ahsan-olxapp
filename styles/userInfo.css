@@ -1,0 +1,250 @@
+.olx-container{
+    display: flex;
+    flex-direction: column;
+}
+.olx-container-header-top{
+    display: flex;
+    flex-direction: row;
+    height: 12vh;
+    margin: auto;
+}
+@media screen and (max-width:440px){
+ h5{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width:440px){
+     h5{
+        font-size: 15px;
+    }
+}    
+.olxLogo img{
+    float: left;
+    max-width: 120px;
+    max-height: 100vh;
+    margin-right: -8px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+.account{
+    width: 10vw;
+text-align: center;
+margin-right: 10px;
+}
+.account img{
+    max-height: 50px;
+    margin-left:-10px; 
+    margin-top: 10px;
+    margin-bottom: -22px;
+}
+.account h4{
+    font-size: 12px;
+    }
+.signoutClass{
+    flex:1;
+    float: right;
+    width: 40vw;
+}
+.signout-button{
+    min-width:80px;
+    float: right; 
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:1em; 
+    margin-top: 30px;
+    background-color:rgb(255, 144, 0);
+font-size: 17px;
+border: none;
+cursor: pointer;
+} 
+
+@media (max-width:440px){
+
+    .signout-button{
+        min-width:80px;
+        float: left; 
+        min-height:50px;
+        padding: 6px 10px;
+        border-radius:1em; 
+        margin-top: 30px;
+        background-color:rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+} 
+}
+.olx-container-header{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    margin-bottom: 20px;
+    background:#1e83ff;
+    margin: auto;
+    width: 70vw;
+    border-radius:10px; 
+    margin-bottom: 10px;
+}
+
+.header-one{
+    flex:1;
+    width: 49vw;
+  
+}
+
+/*  *//*  */
+/*  */
+
+.olx-container-body{
+    display: flex;
+     text-align: center;
+    flex-direction: row;
+    height: 100vh; 
+    
+}
+.left-navbar{
+    width: 20vw;
+}
+.div0{
+    display: flex;
+     text-align: center;
+    flex-direction: column;
+    height: 100vh;
+   margin: auto;
+}
+.div1{
+    width: 40vw;;
+    height: 40vh;;
+    margin-bottom: 4px;
+    margin-left:100px; 
+}
+
+.div2{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 50vw;
+    flex-wrap: wrap;
+   }
+.div30{
+    background-color: #1e83ff;
+  width: 50vw;  margin: 1px;
+}
+.div3{
+    background-color: #1e83ff;
+  width: 50vw;  margin: 1px;
+}
+
+.div4{
+    background-color:  #1e83ff;
+    margin: 1px;
+    width: 50vw;
+}
+
+.div5{
+    background-color:  #1e83ff;
+    margin: 1px;
+    width: 50vw;
+    margin: 1px;
+}
+.div6{
+    background-color:  #1e83ff;
+    width: 24vw;
+    margin: 2px;
+    margin-left: 10px;
+    
+}
+.div7{
+    background-color:  #1e83ff;
+    width: 24vw;margin: 2px;
+}
+.right-navbar{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+.right-navbar-head{
+flex: 1;margin: 1px;  background:#1e83ff;
+}
+.right-navbar-body{
+    background: #f8f8f8;margin: 1px;
+    padding-top:40px;;  flex: 4;
+}
+.send-notification{
+   text-align: start;
+   margin-right: 5.5vw;
+}
+.send-notification-button{
+    width:10vw;
+    margin-top: 10px;
+    min-height:40px;
+    padding: 6px 10px;
+    border-radius:5px; 
+    margin-left: 5px;
+    background-color: rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}.send-notification-button:active {
+    transform: translateY(1px);
+ }
+.send-notification-text{
+font-size: 14px;
+height: 15vh;
+width: 13vw;;
+cursor: text;
+}
+.right-navbar-foot{
+    flex: 1;
+    background:  #1e83ff;margin: 1px;
+}
+
+.olx-container-footer{
+    display: flex;
+ flex-direction: column;
+   height: 10vh;
+}
+.olx-container-footer .footer{
+  flex: 7;
+ }
+
+.add-button-olx{
+    min-width:60px;
+    margin-top: 10px;
+    min-height:50px;
+    padding: 6px 10px;
+    border-radius:10px; 
+    margin-left: 5px;
+    background-color: rgb(255, 144, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}
+.add-button-olx:active {
+    transform: translateY(1px);
+ }
+ @media screen and (max-width:440px){
+
+    .olx-container-header{
+        display: flex;
+        flex-direction: row;
+        height: 70px;
+        margin-bottom: 20px;
+        background:#1e83ff;
+        width: 90vw;
+        border-radius:10px; 
+    }
+    
+    .header-one{
+        flex:1;
+        width: 49vw;
+      
+    }
+}
+   
+
+/*  */
+

@@ -1,0 +1,100 @@
+.body{
+    background-image: url('../assets/back3.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    align-content: center;
+ }
+ .container{
+     display: flex;
+     flex-direction:column; 
+     height: 100vh;
+ }
+.form-header{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+.form-header .inner-header{
+    flex: 1;
+}
+.form-header .inner-body{
+    background-color: rgba(128, 128, 128, 0.314);;
+    text-align: center;
+    color: #fff;
+}
+
+.form-header .inner-footer{
+ flex:1;
+}
+
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: rgba(0, 0,0, 0.314);
+}
+.form-heading{
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.314);
+    color: white
+}
+.signup-fullname input{
+    max-width: 250px;
+    border-bottom: 1px solid;
+    background: transparent;
+    color: #fff;
+   font-size: 25px;
+   padding: 7px;
+   margin-bottom: 5px;
+    
+}
+.signup-fullname label{
+    font-size: 25px;
+    color: #fff;
+   }
+.signup-email input{
+    max-width: 250px;
+    border-bottom: 1px solid;
+    background: transparent;
+    color: #fff;
+   font-size: 25px;
+   padding: 7px;
+   margin-bottom: 5px;
+   margin-right: 10px;
+}
+.signup-email label{
+    color: #fff;
+    font-size: 25px;
+}
+.signup-password label{
+    color: #fff;
+    font-size: 25px;
+}
+.signup-password input{
+    max-width: 250px;
+    border-bottom: 1px solid;
+    background: transparent;
+    color: #fff;
+   font-size: 25px;padding: 7px;
+   margin-bottom: 5px;
+   margin-right: 10px;
+}
+.signup-button input{
+   margin-top: 20px;
+ min-width:150px;  
+ color:rgb(11, 120, 192);;
+ background: transparent;
+ cursor: pointer;
+    font-size: 30px;
+}
+.signup-button:active{
+    transform: translateY(1px);
+}
+
+.form-footer{
+   height: 10vh;
+    flex:12;
+    }

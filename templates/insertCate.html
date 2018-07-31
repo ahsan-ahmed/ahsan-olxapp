@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Category</title>
+    <link rel="stylesheet" href="../styles/insertCate.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDk6v6fSblQrd1nLw9QGsoGs-1UuzeYzPU",
+    authDomain: "readandwritedata-27907.firebaseapp.com",
+    databaseURL: "https://readandwritedata-27907.firebaseio.com",
+    projectId: "readandwritedata-27907",
+    storageBucket: "readandwritedata-27907.appspot.com",
+    messagingSenderId: "526759719465"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body class="body">
+<div class="olx-container">
+        <div class="olx-container-header-top">
+                        <div class="olxLogo"><img src="../assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='../index.html'"  ></div>
+                        <h5>Pakistan's <br>Largest<br> Marketplace</h5>
+                        <div class="account"><img src="../assets/account-image.jpg" alt="account"> <h4 class="account-h4" onclick=" checkUserSignInTemplates()" 
+                            onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" >My<br>account</h4></div>
+                           
+                        <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+                            onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+                        </div>
+        </div>        
+        <div class="olx-container-header">
+                <div class="login-head"></div>
+                <div class="login-body">Submit Free Ads</div>
+        <div class="login-button"><input type="button" value="Login Account" onclick="checkLoginUser()"
+                onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'"></div>
+        </div>
+        <div class="container-body" >
+                <label class="labelName">Name</label>
+                <input type="text" class="name" placeholder="enter your Name">
+                <label class="labelCategories">Categories</label>
+                <input type="text" class="categories" placeholder="only 20 words describe">
+                <label class="labelLongDescription">Long Description: </label>
+                <input type="text" class="longDescription" placeholder="enter long description">
+                <label class="labelPrice"> Price: </label>
+                <input type="number" class="price" placeholder="enter price">
+                <label class="labelModel">Model:</label>  
+                <input type="text" class="model" placeholder="enter model">
+                <label class="labelYear">Year:</label>
+                <input type="number" class="year" placeholder="enter year">
+                <label for="picture:">Picture:</label>
+                <input type="file" class="imageId" accept="image/x-png,image/gif,image/jpeg" />
+                <input type="button" value="submit add !!" class="submit-button" onclick="addCategory()">
+                <h3 class="errorLogin"></h3>
+        </div>
+        <div class="container-footer">
+                <input type="button" value="Goto OLX APP" class="goto-olx-app" 
+                onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="window.location.href='../index.html'">
+        </div>
+</div>
+</body>
+<script src="../scripts/app.js"></script>
+</html>

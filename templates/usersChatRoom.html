@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Chat Room</title>
+    <link rel="stylesheet" href="../styles/usersChatRoom.css">
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDk6v6fSblQrd1nLw9QGsoGs-1UuzeYzPU",
+        authDomain: "readandwritedata-27907.firebaseapp.com",
+        databaseURL: "https://readandwritedata-27907.firebaseio.com",
+        projectId: "readandwritedata-27907",
+        storageBucket: "readandwritedata-27907.appspot.com",
+        messagingSenderId: "526759719465"
+      };
+      firebase.initializeApp(config);
+    </script>
+</head>
+<body onload="getMessages()">
+  <div class="chat-container">
+  <div class="chat-head">
+          
+          <div class="chat-head-head">
+            <img src="../assets/arrow.png" alt="arrow" onclick="location.href='chatHomepage.html'" style="cursor: pointer;"
+            onmouseover="this.style.color='red'" onmouseout="this.style.color='black'"
+            ></div>
+          <div class="chat-head-head-below">
+            <img src="../assets/man.png" alt="man"></div>
+          <div class="chat-head-body"><p class="chat-head-body-para1"></p></div>
+          <div class="chat-head-foot"></div>
+      
+  </div>
+  <div class="chat-body">
+      <div class="left">hello</div>
+      <div class="right">my name is ahsan</div>
+  </div>
+  <div class="chat-foot">
+      <div class="chat-foot-head">
+        <input type="text" class="text-field"  onmouseover="this.style.borderColor='lightBlue'" onmouseout="this.style.borderColor='#f8f8f8'">
+      </div>
+      <div class="chat-foot-body">
+        <img src="../assets/sendButton.png" alt="send message" onclick="userSendText();" class="sendSms"
+          style="cursor: pointer;"
+         onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#f8f8f8'">
+      </div>
+       <div class="chat-foot-foot"></div>
+  
+  </div>
+  
+</div>
+</body>
+<script src="../scripts/app.js"></script>
+</html>

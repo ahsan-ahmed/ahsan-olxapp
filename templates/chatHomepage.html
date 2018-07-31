@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat HomePage</title>
+    <link rel="stylesheet" href="../styles/chatHomepage.css">
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDk6v6fSblQrd1nLw9QGsoGs-1UuzeYzPU",
+        authDomain: "readandwritedata-27907.firebaseapp.com",
+        databaseURL: "https://readandwritedata-27907.firebaseio.com",
+        projectId: "readandwritedata-27907",
+        storageBucket: "readandwritedata-27907.appspot.com",
+        messagingSenderId: "526759719465"
+      };
+      firebase.initializeApp(config);
+    </script>
+</head>
+<body onload="sessionStorage.setItem('previousAdId',0)">
+<div class="olx-container">
+        <div class="olx-container-header-top">
+           <div class="olxLogo"><img src="../assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='../index.html'"  ></div>
+           <h5>Pakistan's <br>Largest<br> Marketplace</h5>
+           <div class="account"><img src="../assets/account-image.jpg" alt="account"> <h4 class="account-h4" onclick=" checkUserSignInTemplates()" 
+               onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" >My<br>account</h4></div>
+              
+           <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+               onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+           </div>
+        </div>
+
+
+        <div class="chat-room-button">
+            <input type="button" value="CLICK ME TO SHOW YOUR CHATsss!!!" onclick="showDataUsers()">
+           </div>
+       
+       <div class="chatroom-body">
+
+       </div>
+       
+</div>
+</body>
+<script src="../scripts/app.js"></script>
+</html>
